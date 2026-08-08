@@ -1,4 +1,4 @@
-// ── mobile nav toggle ─────────────────────────────
+
 document.getElementById('navToggle').addEventListener('click', function () {
   document.getElementById('navMenu').classList.toggle('show');
 });
@@ -8,14 +8,14 @@ document.querySelectorAll('#navMenu a').forEach(function (link) {
   });
 });
 
-// ── kick the ball ─────────────────────────────────
+
 document.getElementById('ball').addEventListener('click', function () {
   var ball = document.getElementById('ball');
   ball.style.transform = 'rotate(' + (Math.random() * 360 - 180) + 'deg)';
   setTimeout(function () { ball.style.transform = ''; }, 300);
 });
 
-// ── scroll-reveal cards ───────────────────────────
+
 var revealItems = document.querySelectorAll('[data-reveal]');
 if ('IntersectionObserver' in window) {
   var revealObserver = new IntersectionObserver(
@@ -35,7 +35,6 @@ if ('IntersectionObserver' in window) {
   revealItems.forEach(function (item) { item.classList.add('in'); });
 }
 
-// ── highlight the current section in the nav ─────
 var sections = document.querySelectorAll('section[id]');
 var navLinks = document.querySelectorAll('#navMenu a');
 
